@@ -67,7 +67,7 @@ INSERT INTO Reservations VALUES (23, 1, 206, 2, 0, "2023-11-22", "2023-11-25", 4
 INSERT INTO Reservations VALUES (24, 1, 301, 2, 2, "2023-11-22", "2023-11-25", 599.97);
 INSERT INTO Reservations VALUES (25, 10, 302, 2, 0, "2023-12-24", "2023-12-28", 699.96);
 
--- Insert GuestsToReservations Intermediary Table
+-- Insert GuestsToReservations Intermediary Values
 INSERT INTO GuestsToReservations VALUES (1, 1);
 INSERT INTO GuestsToReservations VALUES (1, 20);
 INSERT INTO GuestsToReservations VALUES (1, 23);
@@ -91,5 +91,46 @@ INSERT INTO GuestsToReservations VALUES (10, 11);
 INSERT INTO GuestsToReservations VALUES (10, 25);
 INSERT INTO GuestsToReservations VALUES (11, 12);
 INSERT INTO GuestsToReservations VALUES (11, 13);
+
+-- Insert RoomsToAmenities Intermediary Values
+INSERT INTO RoomsToAmenities VALUES (201, 1);
+INSERT INTO RoomsToAmenities VALUES (201, 4);
+INSERT INTO RoomsToAmenities VALUES (202, 2);
+INSERT INTO RoomsToAmenities VALUES (203, 1);
+INSERT INTO RoomsToAmenities VALUES (203, 4);
+INSERT INTO RoomsToAmenities VALUES (204, 2);
+INSERT INTO RoomsToAmenities VALUES (205, 1);
+INSERT INTO RoomsToAmenities VALUES (205, 2);
+INSERT INTO RoomsToAmenities VALUES (205, 4);
+INSERT INTO RoomsToAmenities VALUES (206, 1);
+INSERT INTO RoomsToAmenities VALUES (206, 2);
+INSERT INTO RoomsToAmenities VALUES (207, 1);
+INSERT INTO RoomsToAmenities VALUES (207, 2);
+INSERT INTO RoomsToAmenities VALUES (207, 4);
+INSERT INTO RoomsToAmenities VALUES (208, 1);
+INSERT INTO RoomsToAmenities VALUES (208, 2);
+INSERT INTO RoomsToAmenities VALUES (301, 1);
+INSERT INTO RoomsToAmenities VALUES (301, 4);
+INSERT INTO RoomsToAmenities VALUES (302, 2);
+INSERT INTO RoomsToAmenities VALUES (303, 1);
+INSERT INTO RoomsToAmenities VALUES (303, 4);
+INSERT INTO RoomsToAmenities VALUES (304, 2);
+INSERT INTO RoomsToAmenities VALUES (305, 1);
+INSERT INTO RoomsToAmenities VALUES (305, 2);
+INSERT INTO RoomsToAmenities VALUES (305, 4);
+INSERT INTO RoomsToAmenities VALUES (306, 1);
+INSERT INTO RoomsToAmenities VALUES (306, 2);
+INSERT INTO RoomsToAmenities VALUES (307, 1);
+INSERT INTO RoomsToAmenities VALUES (307, 2);
+INSERT INTO RoomsToAmenities VALUES (307, 4);
+INSERT INTO RoomsToAmenities VALUES (308, 1);
+INSERT INTO RoomsToAmenities VALUES (308, 2);
+INSERT INTO RoomsToAmenities VALUES (401, 1);
+INSERT INTO RoomsToAmenities VALUES (401, 2);
+INSERT INTO RoomsToAmenities VALUES (401, 3);
+INSERT INTO RoomsToAmenities VALUES (402, 1);
+INSERT INTO RoomsToAmenities VALUES (402, 2);
+INSERT INTO RoomsToAmenities VALUES (402, 3);
+
 
 

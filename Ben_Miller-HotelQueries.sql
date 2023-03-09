@@ -95,12 +95,9 @@ AND YEAR(Reservations.startDate) <= 2023 AND YEAR(Reservations.endDate) >= 2023;
 Write a query that returns a list of all guest names and the 
 number of reservations per guest, sorted starting with the 
 guest with the most reservations and then by the guest's last name.
+Bit complicated, but I want to ensure that one reservation, with multiple
+rooms, counts only as one reservation.
 */
-SELECT Guests.firstName, Guests.lastName, count(Reservations.reservationID) AS "Number of Reservations" FROM Reservations
-JOIN Guests ON Reservations.guestID = Guests.guestID
-GROUP BY Reservations.guestID
-ORDER BY count(Reservations.reservationID) DESC, Guests.lastName;
-
 SELECT 
 	min(FirstName) AS "First Name",
     min(LastName) AS "Last Name",
@@ -117,5 +114,11 @@ ORDER BY count(T.ReservationID) DESC, min(LastName);
 Write a query that displays the name, address, and phone number 
 of a guest based on their phone number. (Choose a phone number from the existing data.)
 */
-
+SELECT 
+	Guests.firstName AS "First Name",
+    Guests.lastName AS "Last Name",
+    Guests.address AS "Address",
+    Guests.phone AS "Phone"
+FROM Guests
+WHERE phone = "(308) 494-0198";
 

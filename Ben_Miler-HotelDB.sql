@@ -34,10 +34,10 @@ CREATE TABLE Reservations (
 	reservationID Int Primary Key,
     guestID Int,
     roomNumber Int,
-    startDate Date,
-    endDate Date,
     adults Int,
     children Int,
+    startDate Date,
+    endDate Date,
     cost Float,
     FOREIGN KEY (guestID) REFERENCES Guests (guestID),
     FOREIGN KEY (roomNumber) REFERENCES Rooms (roomNumber)

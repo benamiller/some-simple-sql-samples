@@ -31,7 +31,7 @@ CREATE TABLE Rooms (
 );
 
 CREATE TABLE Reservations (
-	reservationID Int Primary Key,
+	reservationID Int,
     guestID Int,
     roomNumber Int,
     adults Int,
@@ -39,6 +39,7 @@ CREATE TABLE Reservations (
     startDate Date,
     endDate Date,
     cost Float,
+    PRIMARY KEY (reservationID, roomNumber),
     FOREIGN KEY (guestID) REFERENCES Guests (guestID),
     FOREIGN KEY (roomNumber) REFERENCES Rooms (roomNumber)
 );
@@ -57,9 +58,11 @@ CREATE TABLE RoomsToAmenities (
     FOREIGN KEY (amenityID) REFERENCES Amenities (amenityID)
 );
 
+/*
 CREATE TABLE ReservationsToRooms (
 	reservationID INT,
     roomNumber INT,
 	FOREIGN KEY (reservationID) REFERENCES Reservations (reservationID),
     FOREIGN KEY (roomNumber) REFERENCES Rooms (roomNumber)
 );
+*/

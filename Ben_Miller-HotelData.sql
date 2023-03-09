@@ -53,44 +53,42 @@ INSERT INTO Reservations VALUES (9, 8, 301, 1, 0, "2023-04-09", "2023-04-13", 79
 INSERT INTO Reservations VALUES (10, 9, 207, 1, 1, "2023-04-23", "2023-04-24", 174.99);
 INSERT INTO Reservations VALUES (11, 10, 401, 2, 4, "2023-05-30", "2023-06-02", 1199.97);
 INSERT INTO Reservations VALUES (12, 11, 206, 2, 0, "2023-06-10", "2023-06-14", 599.96);
-INSERT INTO Reservations VALUES (13, 11, 208, 1, 0, "2023-06-10", "2023-06-14", 599.96);
-INSERT INTO Reservations VALUES (14, 5, 304, 3, 0, "2023-06-17", "2023-06-18", 184.99);
-INSERT INTO Reservations VALUES (15, 0, 205, 2, 0, "2023-06-28", "2023-07-02", 699.96);
-INSERT INTO Reservations VALUES (16, 8, 204, 3, 1, "2023-07-13", "2023-07-14", 184.99);
-INSERT INTO Reservations VALUES (17, 9, 401, 4, 2, "2023-07-18", "2023-07-21", 1259.97);
-INSERT INTO Reservations VALUES (18, 2, 303, 2, 1, "2023-07-28", "2023-07-29", 199.99);
-INSERT INTO Reservations VALUES (19, 2, 305, 1, 0, "2023-08-30", "2023-09-1", 349.98);
-INSERT INTO Reservations VALUES (20, 1, 208, 2, 0, "2023-09-16", "2023-09-17", 149.99);
-INSERT INTO Reservations VALUES (21, 4, 203, 2, 2, "2023-09-13", "2023-09-15", 399.98);
-INSERT INTO Reservations VALUES (22, 3, 401, 2, 2, "2023-11-22", "2023-11-25", 1199.97);
-INSERT INTO Reservations VALUES (23, 1, 206, 2, 0, "2023-11-22", "2023-11-25", 449.97);
-INSERT INTO Reservations VALUES (24, 1, 301, 2, 2, "2023-11-22", "2023-11-25", 599.97);
-INSERT INTO Reservations VALUES (25, 10, 302, 2, 0, "2023-12-24", "2023-12-28", 699.96);
+INSERT INTO Reservations VALUES (12, 11, 208, 1, 0, "2023-06-10", "2023-06-14", 599.96);
+INSERT INTO Reservations VALUES (13, 5, 304, 3, 0, "2023-06-17", "2023-06-18", 184.99);
+INSERT INTO Reservations VALUES (14, 0, 205, 2, 0, "2023-06-28", "2023-07-02", 699.96);
+INSERT INTO Reservations VALUES (15, 8, 204, 3, 1, "2023-07-13", "2023-07-14", 184.99);
+INSERT INTO Reservations VALUES (16, 9, 401, 4, 2, "2023-07-18", "2023-07-21", 1259.97);
+INSERT INTO Reservations VALUES (17, 2, 303, 2, 1, "2023-07-28", "2023-07-29", 199.99);
+INSERT INTO Reservations VALUES (18, 2, 305, 1, 0, "2023-08-30", "2023-09-1", 349.98);
+INSERT INTO Reservations VALUES (19, 1, 208, 2, 0, "2023-09-16", "2023-09-17", 149.99);
+INSERT INTO Reservations VALUES (20, 4, 203, 2, 2, "2023-09-13", "2023-09-15", 399.98);
+INSERT INTO Reservations VALUES (21, 3, 401, 2, 2, "2023-11-22", "2023-11-25", 1199.97);
+INSERT INTO Reservations VALUES (22, 1, 206, 2, 0, "2023-11-22", "2023-11-25", 449.97);
+INSERT INTO Reservations VALUES (22, 1, 301, 2, 2, "2023-11-22", "2023-11-25", 599.97);
+INSERT INTO Reservations VALUES (23, 10, 302, 2, 0, "2023-12-24", "2023-12-28", 699.96);
 
 -- Insert GuestsToReservations Intermediary Values
 INSERT INTO GuestsToReservations VALUES (1, 1);
-INSERT INTO GuestsToReservations VALUES (1, 20);
-INSERT INTO GuestsToReservations VALUES (1, 23);
-INSERT INTO GuestsToReservations VALUES (1, 24);
+INSERT INTO GuestsToReservations VALUES (1, 19);
+INSERT INTO GuestsToReservations VALUES (1, 22);
 INSERT INTO GuestsToReservations VALUES (2, 2);
+INSERT INTO GuestsToReservations VALUES (2, 17);
 INSERT INTO GuestsToReservations VALUES (2, 18);
-INSERT INTO GuestsToReservations VALUES (2, 19);
 INSERT INTO GuestsToReservations VALUES (3, 3);
-INSERT INTO GuestsToReservations VALUES (3, 22);
+INSERT INTO GuestsToReservations VALUES (3, 21);
 INSERT INTO GuestsToReservations VALUES (4, 4);
-INSERT INTO GuestsToReservations VALUES (4, 21);
+INSERT INTO GuestsToReservations VALUES (4, 20);
 INSERT INTO GuestsToReservations VALUES (5, 6);
-INSERT INTO GuestsToReservations VALUES (5, 14);
+INSERT INTO GuestsToReservations VALUES (5, 13);
 INSERT INTO GuestsToReservations VALUES (6, 7);
 INSERT INTO GuestsToReservations VALUES (7, 8);
 INSERT INTO GuestsToReservations VALUES (8, 9);
-INSERT INTO GuestsToReservations VALUES (8, 16);
+INSERT INTO GuestsToReservations VALUES (8, 15);
 INSERT INTO GuestsToReservations VALUES (9, 10);
-INSERT INTO GuestsToReservations VALUES (9, 17);
+INSERT INTO GuestsToReservations VALUES (9, 16);
 INSERT INTO GuestsToReservations VALUES (10, 11);
-INSERT INTO GuestsToReservations VALUES (10, 25);
+INSERT INTO GuestsToReservations VALUES (10, 23);
 INSERT INTO GuestsToReservations VALUES (11, 12);
-INSERT INTO GuestsToReservations VALUES (11, 13);
 
 -- Insert RoomsToAmenities Intermediary Values
 INSERT INTO RoomsToAmenities VALUES (201, 1);
@@ -131,6 +129,3 @@ INSERT INTO RoomsToAmenities VALUES (401, 3);
 INSERT INTO RoomsToAmenities VALUES (402, 1);
 INSERT INTO RoomsToAmenities VALUES (402, 2);
 INSERT INTO RoomsToAmenities VALUES (402, 3);
-
-
-

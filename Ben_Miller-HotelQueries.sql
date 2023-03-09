@@ -96,6 +96,21 @@ Write a query that returns a list of all guest names and the
 number of reservations per guest, sorted starting with the 
 guest with the most reservations and then by the guest's last name.
 */
+SELECT Guests.firstName, Guests.lastName, count(Reservations.reservationID) AS "Number of Reservations" FROM Reservations
+JOIN Guests ON Reservations.guestID = Guests.guestID
+GROUP BY Reservations.guestID
+ORDER BY count(Reservations.reservationID) DESC, Guests.lastName;
+
+SELECT 
+	min(FirstName) AS "First Name",
+    min(LastName) AS "Last Name",
+    count(T.ReservationID) AS "Number of Reservations"
+FROM (
+	SELECT min(Reservations.guestID) AS "GuestID", min(Reservations.startDate) AS "CheckIn", min(Reservations.endDate) AS "CheckOut", min(Guests.firstName) AS "FirstName", min(Guests.lastName) AS "LastName", Reservations.reservationID AS "ReservationID" FROM Reservations
+	JOIN Guests ON Reservations.guestID = Guests.guestID
+	GROUP BY Reservations.reservationID) AS T
+GROUP BY T.GuestID
+ORDER BY count(T.ReservationID) DESC, min(LastName);
 
 /*
 7.

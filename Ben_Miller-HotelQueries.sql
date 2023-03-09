@@ -62,10 +62,29 @@ reservation ID, and per-room cost for each reservation.
 The results should include all rooms,
 whether or not there is a reservation associated with the room.
 */
-SELECT 
+SELECT  
 	Rooms.roomNumber AS "Room Number",
 	Reservations.reservationID AS "Reservation ID",
 	Rooms.basePrice AS "Room Base Price",
 	Reservations.cost AS "Reservation Cost For Room"
 FROM Rooms LEFT JOIN Reservations ON Rooms.roomNumber = Reservations.roomNumber;
+
+
+/*
+Write a query that returns all the rooms accommodating 
+at least three guests and that are reserved on any date in April 2023.
+*/
+
+
+/*
+Write a query that returns a list of all guest names and the 
+number of reservations per guest, sorted starting with the 
+guest with the most reservations and then by the guest's last name.
+*/
+
+/*
+Write a query that displays the name, address, and phone number 
+of a guest based on their phone number. (Choose a phone number from the existing data.)
+*/
+
 

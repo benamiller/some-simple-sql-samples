@@ -17,7 +17,7 @@ CREATE TABLE Guests (
     city VARCHAR(20),
     stateAbbr VARCHAR(2),
     zip Int,
-    phone VARCHAR(13)
+    phone VARCHAR(14)
 );
 
 CREATE TABLE Rooms (

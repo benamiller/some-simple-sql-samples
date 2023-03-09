@@ -44,7 +44,6 @@ and how many people were included in the reservation.
 (Choose a guest's name from the existing data.)
 Bettyann Seery was selected in this case
 */
-
 SELECT
 	Reservations.reservationID AS "Reservation ID",
 	Guests.firstName AS "First Name",
@@ -56,3 +55,17 @@ FROM Reservations
 JOIN Guests
 ON Guests.guestID = Reservations.guestID
 WHERE Guests.firstName = "Bettyann" AND Guests.lastName = "Seery";
+
+/*
+Write a query that returns a list of rooms,
+reservation ID, and per-room cost for each reservation.
+The results should include all rooms,
+whether or not there is a reservation associated with the room.
+*/
+SELECT 
+	Rooms.roomNumber AS "Room Number",
+	Reservations.reservationID AS "Reservation ID",
+	Rooms.basePrice AS "Room Base Price",
+	Reservations.cost AS "Reservation Cost For Room"
+FROM Rooms LEFT JOIN Reservations ON Rooms.roomNumber = Reservations.roomNumber;
+

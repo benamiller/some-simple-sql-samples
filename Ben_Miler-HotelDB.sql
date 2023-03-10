@@ -1,3 +1,5 @@
+-- Ben Miller 2022-03-10
+
 DROP DATABASE IF EXISTS hotelSoftwareGuild;
 
 CREATE DATABASE hotelSoftwareGuild;

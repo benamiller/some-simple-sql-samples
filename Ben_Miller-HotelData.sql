@@ -129,3 +129,16 @@ INSERT INTO RoomsToAmenities VALUES (401, 3);
 INSERT INTO RoomsToAmenities VALUES (402, 1);
 INSERT INTO RoomsToAmenities VALUES (402, 2);
 INSERT INTO RoomsToAmenities VALUES (402, 3);
+
+-- Delete Jeremiah Pendergrass's Reservations
+-- Using reservationID in case of many Jeremiah Pendergrass's
+DELETE FROM GuestsToReservations WHERE GuestsToReservations.guestID = 7;
+DELETE FROM Reservations WHERE Reservations.guestID = 7;
+DELETE FROM Guests WHERE Guests.guestID = 7;
+
+-- Alternative approach if we can guarantee first and last names are unique (which is unlikely)
+/*
+DELETE FROM GuestsToReservations WHERE GuestsToReservations.guestID IN (SELECT Guests.guestID FROM Guests WHERE Guests.firstName = "Jeremiah" AND Guests.lastName = "Pendergrass");
+DELETE FROM Reservations WHERE Reservations.GuestID IN (SELECT Guests.guestID FROM Guests WHERE Guests.firstName = "Jeremiah" AND Guests.lastName = "Pendergrass");
+DELETE FROM Guests where Guests.firstName = "Jeremiah" AND Guests.lastName = "Pendergrass";
+*/

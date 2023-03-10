@@ -1,0 +1,12 @@
+"Reservation ID",Amenity,"Room Number","First Name","Last Name","Check In","Check Out"
+4,Jacuzzi,201,Karie,Yang,2023-03-06,2023-03-07
+2,Jacuzzi,203,Bettyann,Seery,2023-02-05,2023-02-10
+20,Jacuzzi,203,Karie,Yang,2023-09-13,2023-09-15
+14,Jacuzzi,205,Ben,Miller,2023-06-28,2023-07-02
+10,Jacuzzi,207,Wilfred,Vise,2023-04-23,2023-04-24
+9,Jacuzzi,301,Walter,Holaway,2023-04-09,2023-04-13
+22,Jacuzzi,301,Mack,Simmer,2023-11-22,2023-11-25
+17,Jacuzzi,303,Bettyann,Seery,2023-07-28,2023-07-29
+3,Jacuzzi,305,Duane,Cullison,2023-02-22,2023-02-24
+18,Jacuzzi,305,Bettyann,Seery,2023-08-30,2023-09-01
+5,Jacuzzi,307,Ben,Miller,2023-03-17,2023-03-20

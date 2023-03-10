@@ -87,7 +87,7 @@ SELECT
     Reservations.endDate AS "Check Out"
 FROM Reservations
 WHERE Reservations.children + Reservations.adults > 3
-AND 5 BETWEEN MONTH(Reservations.startDate) AND MONTH(Reservations.endDate)
+AND 4 BETWEEN MONTH(Reservations.startDate) AND MONTH(Reservations.endDate)
 AND YEAR(Reservations.startDate) <= 2023 AND YEAR(Reservations.endDate) >= 2023;
 
 /*

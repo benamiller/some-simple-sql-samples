@@ -150,14 +150,14 @@ Room Number	Reservation ID	Room Base Price	Reservation Cost For Room
 Write a query that returns all the rooms accommodating 
 at least three guests and that are reserved on any date in April 2023.
 */
-SELECT 
+SELECT
 	Reservations.reservationID AS "Reservation ID",
     Reservations.roomNumber AS "Room Number",
     Reservations.children + Reservations.adults AS "Number of People",
     Reservations.startDate AS "Check In",
     Reservations.endDate AS "Check Out"
 FROM Reservations
-WHERE Reservations.children + Reservations.adults > 3
+WHERE Reservations.children + Reservations.adults >= 3
 AND 4 BETWEEN MONTH(Reservations.startDate) AND MONTH(Reservations.endDate)
 AND YEAR(Reservations.startDate) <= 2023 AND YEAR(Reservations.endDate) >= 2023;
 /*
@@ -167,8 +167,30 @@ with at least three guests. This can be seen in the raw data. This query,
 however, does work for any other month with results, like May.
 /*
 
+/*
+5. A different interpretation
+If the question is asking for rooms that COULD accomodate at least 3 guests,
+and are reserved on any date in April 2023 with any number of guests,
+then following query would work:
+*/
+SELECT
+    Reservations.roomNumber AS "Room Number",
+    Rooms.maximumOccupancy AS "Maximum Capacity",
+    Reservations.startDate AS "Check In",
+    Reservations.endDate AS "Check Out"
+FROM Reservations
+JOIN Rooms ON Rooms.roomNumber = Reservations.roomNumber
+WHERE Rooms.maximumOccupancy >= 3
+AND 4 BETWEEN MONTH(Reservations.startDate) AND MONTH(Reservations.endDate)
+AND YEAR(Reservations.startDate) <= 2023 AND YEAR(Reservations.endDate) >= 2023;
+/*
+5. A different interpretation RESULTS
+Room Number	Maximum Capacity	Check In	Check Out
+301			4					2023-04-09	2023-04-13
+*/
 
 
+/*
 6.
 Write a query that returns a list of all guest names and the 
 number of reservations per guest, sorted starting with the 

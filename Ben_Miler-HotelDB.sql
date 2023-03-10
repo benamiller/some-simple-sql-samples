@@ -61,6 +61,7 @@ CREATE TABLE RoomsToAmenities (
 );
 
 /*
+-- This table is extraneous
 CREATE TABLE ReservationsToRooms (
 	reservationID INT,
     roomNumber INT,
